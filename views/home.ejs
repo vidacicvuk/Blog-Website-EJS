@@ -2,9 +2,10 @@
 
 <h1>Home</h1>
 <p><%= homeParagraph %></p>
+<% if(blogPosts.length!=0){      %>
 <% blogPosts.forEach((post)=>{      %>
  <h1><%= post.postTitle %></h2>
  <p><%= post.postBody.substring(0,100)+"..." %> <a href="/post/<%= post.postTitle %>">Read More</a> </p>
 <% }) %>
-
+<% } %>
 <%- include("./partials/footer.ejs") -%>
